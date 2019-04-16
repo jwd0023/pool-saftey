@@ -51,5 +51,5 @@ python3 -m juicy.test.log_data
 ```
 [Then go to the dashboard][1]
 
-[1]: thingspeak.com/channels/753579
+[1]: https://thingspeak.com/channels/753579
 
