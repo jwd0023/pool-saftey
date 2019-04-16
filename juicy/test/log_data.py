@@ -1,3 +1,4 @@
+import sys
 import time
 import json
 import datetime
@@ -81,6 +82,8 @@ if __name__ == "__main__":
         if (time.time() - last_send_time) > SEND_DELAY:
             # Send bulk update, clear measurement buffer, and update timing information.
             print("Sending measurement buffer of size " + str(len(measurement_buffer)))
+            # Flush logs for journalctl
+            sys.stdout.flush()
             bulk_update_channel(measurement_buffer)
             measurement_buffer = []
             last_send_time = time.time()
