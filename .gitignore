@@ -1,2 +1,3 @@
 *.pyc
 notification_settings.yaml
+notification_settings_template.yml
