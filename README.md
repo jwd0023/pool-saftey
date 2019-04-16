@@ -11,6 +11,7 @@ apt install -y git neovim python-venv i2ctools
 git clone https://github.com/jwd0023/juicy.git
 python3 -m venv ~/venvs/juicy
 source ~/venvs/juicy/bin/activate
+# Hack because of mpu9250 
 pip install build_utils
 pip3 install -r juicy/requirments.txt
 ```
