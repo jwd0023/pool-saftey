@@ -32,7 +32,8 @@ cd ./pool-saftey
 python3 -m venv ./service_env
 ./service_env/bin/pip install build_utils
 ./service_env/bin/pip3 install -r requirments.txt
-ln -s pool-saftey.service /etc/systemd/system/
+# Make sure to use absolute path
+ln -s /srv/pool-saftey/pool-saftey.service /etc/systemd/system/
 # Check that the service installed
 systemd-analyze verify pool-saftey.service
 # Start service
@@ -50,5 +51,5 @@ python3 -m juicy.test.log_data
 ```
 [Then go to the dashboard][1]
 
-[1]: thingspeak.com/channels/753579
+[1]: https://thingspeak.com/channels/753579
 

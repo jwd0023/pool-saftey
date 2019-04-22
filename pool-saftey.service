@@ -2,17 +2,17 @@
 Description=Collect data for Seinor Design
 After=network.target
 
-RestartSec=10
 StartLimitBurst=5
 StartLimitIntervalSec=60
 # StartLimitIntervalSec > StartLimitBurst * RestartSec
 
 [Service]
-Type=fork
+Type=simple
 User=pi
 WorkingDirectory=/srv/pool-saftey
-ExecStart=/srv/pool-saftey/service_env/bin/python3 -m juicy.test.log_data
+ExecStart=/srv/pool-saftey/service_env/bin/python3 -m juicy.test.poolAlarm
 Restart=on-failure
+RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
