@@ -10,7 +10,7 @@ StartLimitIntervalSec=60
 Type=simple
 User=pi
 WorkingDirectory=/srv/pool-saftey
-ExecStart=/srv/pool-saftey/service_env/bin/python3 -m juicy.test.log_data
+ExecStart=/srv/pool-saftey/service_env/bin/python3 -m juicy.test.poolAlarm
 Restart=on-failure
 RestartSec=10
 
